@@ -1,2 +1,86 @@
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Santhosh Kumar</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f5fa;color:#243047;line-height:1.7}
+header{background:linear-gradient(135deg,#12345a,#2475a8);color:white;text-align:center;padding:38px 18px}
+header h1{font-size:30px;margin:0 0 8px}
+.container{max-width:760px;margin:22px auto;padding:0 14px}
+.card{background:white;padding:23px;border-radius:16px;margin-bottom:18px;box-shadow:0 4px 18px #00000010}
+h2{color:#174c78;margin-top:0}
+button,.pay{border:0;border-radius:9px;padding:12px 17px;margin:5px 3px;font-size:16px;cursor:pointer}
+.lang button{background:#e3edf7;color:#174c78}
+.pay{display:inline-block;background:#087d53;color:white;text-decoration:none;font-weight:bold}
+.copy{background:#174c78;color:white}
+.upi{background:#f1f5f9;padding:12px;border-radius:8px;overflow-wrap:anywhere;font-weight:bold}
+footer{text-align:center;color:#64748b;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>Support Santhosh Kumar</h1>
+<p>A Humble Appeal for Help and Support</p>
+</header>
+
+<div class="container">
+<div class="card lang">
+<strong>Select Language / மொழியைத் தேர்ந்தெடுக்கவும்</strong><br>
+<button onclick="showLang('en')">English</button>
+<button onclick="showLang('ta')">தமிழ்</button>
+<button onclick="showLang('hi')">हिन्दी</button>
+</div>
+
+<div class="card" id="story">
+<h2>Our Humble Appeal</h2>
+<p>My name is Santhosh Kumar. My family and I are going through a difficult financial situation due to medical treatment, hospital admissions and accumulated debts.</p>
+<p>I am doing my best to overcome these difficulties and repay my obligations. I humbly request kind-hearted people to support us in this difficult time. Every contribution, however small, will mean a lot to us.</p>
+<p>Thank you for your kindness, prayers and support.</p>
+</div>
+
+<div class="card">
+<h2>Support Through UPI</h2>
+<p>If you wish to help, you can use the UPI details below.</p>
+<div class="upi" id="upi">hillsqueentravels3702@okhdfcbank</div>
+<button class="copy" onclick="copyUPI()">Copy UPI ID</button>
+<br>
+<a class="pay" href="upi://pay?pa=hillsqueentravels3702@okhdfcbank&pn=Santhosh%20Kumar&cu=INR">Pay using UPI App</a>
+<p><small>Before confirming payment, please verify the recipient name and UPI ID in your payment app.</small></p>
+</div>
+
+<div class="card">
+<h2>Thank You</h2>
+<p>Your kindness, prayers and support give us hope. We are sincerely grateful to everyone who stands with us.</p>
+</div>
+</div>
+
+<footer>Made with gratitude | Support Santhosh Kumar</footer>
+
+<script>
+function copyUPI(){
+ const id="hillsqueentravels3702@okhdfcbank";
+ if(navigator.clipboard && window.isSecureContext){
+  navigator.clipboard.writeText(id).then(()=>alert("UPI ID copied"));
+ }else{
+  prompt("Copy this UPI ID:",id);
+ }
+}
+function showLang(lang){
+ const story=document.getElementById("story");
+ if(lang==="ta"){
+ story.innerHTML="<h2>எங்களின் பணிவான உதவிக் கோரிக்கை</h2><p>என் பெயர் சந்தோஷ் குமார். மருத்துவச் சிகிச்சை, மருத்துவமனை அனுமதி மற்றும் அதிகரித்த கடன் சுமைகளால் நானும் என் குடும்பமும் கடினமான நிதி நெருக்கடியில் இருக்கிறோம்.</p><p>இந்தச் சூழ்நிலையிலிருந்து மீண்டு, எங்களுடைய கடமைகளைச் செலுத்த என்னால் முடிந்த முயற்சிகளைச் செய்து வருகிறேன். இந்தக் கடினமான நேரத்தில் நல்ல உள்ளங்கள் எங்களுக்கு உதவுமாறு பணிவுடன் கேட்டுக்கொள்கிறேன். சிறிய உதவியும் எங்களுக்கு மிகப் பெரிய ஆதரவாக இருக்கும்.</p><p>உங்கள் அன்புக்கும், பிரார்த்தனைக்கும், உதவிக்கும் மனமார்ந்த நன்றி.</p>";
+ }else if(lang==="hi"){
+ story.innerHTML="<h2>हमारी विनम्र सहायता की अपील</h2><p>मेरा नाम संतोष कुमार है। इलाज, अस्पताल में भर्ती और बढ़ते कर्ज के कारण मैं और मेरा परिवार कठिन आर्थिक स्थिति से गुजर रहे हैं।</p><p>इस कठिन परिस्थिति से बाहर निकलने और अपनी जिम्मेदारियां पूरी करने के लिए मैं पूरी कोशिश कर रहा हूं। मैं सभी दयालु लोगों से विनम्रतापूर्वक सहायता का अनुरोध करता हूं। आपकी छोटी-सी मदद भी हमारे लिए बहुत मायने रखती है।</p><p>आपकी दया, प्रार्थना और सहयोग के लिए दिल से धन्यवाद।</p>";
+ }else{
+ story.innerHTML="<h2>Our Humble Appeal</h2><p>My name is Santhosh Kumar. My family and I are going through a difficult financial situation due to medical treatment, hospital admissions and accumulated debts.</p><p>I am doing my best to overcome these difficulties and repay my obligations. I humbly request kind-hearted people to support us in this difficult time. Every contribution, however small, will mean a lot to us.</p><p>Thank you for your kindness, prayers and support.</p>";
+ }
+}
+</script>
+</body>
+</html>
+
