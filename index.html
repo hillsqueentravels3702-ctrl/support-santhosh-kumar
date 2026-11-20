@@ -1,1 +1,159 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Santhosh Kumar</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f3f6fb;
+  color:#243047;
+}
+header{
+  background:linear-gradient(135deg,#102b55,#1769aa);
+  color:white;
+  text-align:center;
+  padding:40px 18px;
+}
+header h1{font-size:30px}
+.container{
+  max-width:650px;
+  margin:25px auto;
+  padding:20px;
+}
+.card{
+  background:white;
+  padding:24px;
+  margin-bottom:20px;
+  border-radius:16px;
+  box-shadow:0 4px 18px #00000012;
+  text-align:center;
+}
+h2{color:#164b80}
+p{line-height:1.7}
+button,.pay{
+  display:inline-block;
+  border:0;
+  border-radius:9px;
+  background:#087bdb;
+  color:white;
+  padding:14px 22px;
+  font-size:16px;
+  text-decoration:none;
+  margin:7px;
+  cursor:pointer;
+}
+.qr{
+  width:220px;
+  max-width:100%;
+  margin:15px auto;
+}
+.upi{
+  background:#eef5ff;
+  padding:14px;
+  border-radius:8px;
+  overflow-wrap:anywhere;
+  font-weight:bold;
+}
+footer{
+  text-align:center;
+  padding:25px;
+  background:#102b55;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Support Santhosh Kumar</h1>
+<p>Your Kindness Can Make a Difference</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🙏 Please Support Our Family</h2>
+<p>
+We are going through a very difficult financial
+and medical situation. We humbly request your
+kind support and prayers during this challenging time.
+</p>
+<p>
+Every contribution, however small, will mean a lot
+to our family. Thank you for your kindness.
+</p>
+</div>
+
+<div class="card">
+<h2>Donate Through UPI</h2>
+<p>Scan the QR code or use your UPI payment app.</p>
+
+<img class="qr"
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi%3A%2F%2Fpay%3Fpa%3Dhillsqueentravels3702%40okhdfcbank%26pn%3DSanthosh%20Kumar"
+alt="UPI Payment QR Code">
+
+<div class="upi">
+hillsqueentravels3702@okhdfcbank
+</div>
+
+<button onclick="copyUPI()">Copy UPI ID</button>
+
+<a class="pay"
+href="upi://pay?pa=hillsqueentravels3702@okhdfcbank&pn=Santhosh%20Kumar&cu=INR">
+Pay Using UPI
+</a>
+</div>
+
+<div class="card">
+<h2>Share This Fundraiser</h2>
+<p>Please share this page with friends and family.</p>
+
+<button onclick="sharePage()">Share Now</button>
+</div>
+
+<div class="card">
+<h2>Thank You ❤️</h2>
+<p>
+Your prayers, kindness and support give us hope.
+May God bless everyone who helps us.
+</p>
+</div>
+
+</div>
+
+<footer>
+<p>Support Santhosh Kumar</p>
+<p>Thank you for your support ❤️</p>
+</footer>
+
+<script>
+function copyUPI(){
+ navigator.clipboard.writeText(
+ "hillsqueentravels3702@okhdfcbank"
+ ).then(()=>alert("UPI ID Copied!"))
+ .catch(()=>alert("Please copy the UPI ID manually."));
+}
+
+function sharePage(){
+ if(navigator.share){
+  navigator.share({
+   title:"Support Santhosh Kumar",
+   text:"Please support our family.",
+   url:window.location.href
+  });
+ }else{
+  window.prompt("Copy this website link:",window.location.href);
+ }
+}
+</script>
+
+</body>
+</html>
+
