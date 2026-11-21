@@ -146,7 +146,13 @@ navigator.clipboard.writeText("919500947531@federal")
 
 function sharePage(){
 if(navigator.share){
-navigator.share({
+
+function copyUPI(){
+  navigator.clipboard.writeText("919500947531@federal")
+    .then(()=>alert("UPI ID copied"))
+    .catch(()=>alert("919500947531@federal"));
+}
+
 title:"Support Santhosh Kumar",
 text:"Please read and share my support page.",
 url:location.href
